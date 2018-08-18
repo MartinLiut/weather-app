@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import Titles from './components/titles';
 import Form from './components/form';
 import Weather from './components/weather';

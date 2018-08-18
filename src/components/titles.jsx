@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 const Titles = () => {
     return ( 
-        <section className="titles">
-            <h1>Weather</h1>
-            <h3>Check out the weather</h3>
+        <section>
+            <h1 className="title-container__title">Martin's Weather</h1>
+            <h3 className="title-container__subtitle">Check out the conditions of the weather</h3>
         </section>
     );
 } 
