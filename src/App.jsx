@@ -4,6 +4,7 @@ import './App.css';
 import Titles from './components/titles';
 import Form from './components/form';
 import Weather from './components/weather';
+import Footer from './components/footer';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const API_KEY = "c1b9236ae770a2e2e69121ccaac0eea3";
@@ -33,7 +34,8 @@ class App extends Component {
         temperature: data.main.temp,
         city:  data.name,
         country:  data.sys.country,
-        humedity:  data.main.humedity,
+        humidity:  data.main.humidity,
+        pressure:  data.main.pressure,
         description:  data.weather[0].description,
         error:  ''
       });
@@ -81,7 +83,8 @@ class App extends Component {
                     temperature={this.state.temperature}
                     city={this.state.city}
                     country={this.state.country}
-                    humedity={this.state.humedity}
+                    humidity={this.state.humidity}
+                    pressure={this.state.pressure}
                     description={this.state.description}
                     error={this.state.error}
                   />
@@ -90,6 +93,8 @@ class App extends Component {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     )
   }

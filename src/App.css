@@ -38,6 +38,9 @@ body {
   letter-spacing: 2px;
   line-height: 1.3;
   font-family: 'Roboto Slab', serif;
+  background: -webkit-linear-gradient(transparent, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-container__subtitle {
@@ -46,6 +49,9 @@ body {
   letter-spacing: 1px;
   line-height: 1.5;
   font-family: "Merriweather", serif;
+  background: -webkit-linear-gradient(#000, #000, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .form-container {
@@ -134,4 +140,26 @@ button:active {
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity .6s ease-in;
+}
+
+Footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2px;
+  width: 100%;
+  text-align: center;
+  background: -webkit-linear-gradient(transparent, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+Footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) { 
+  .wrapper {
+    height: 200vh;
+  }
 }
