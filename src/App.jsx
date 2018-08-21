@@ -49,7 +49,7 @@ class App extends Component {
         <div className="main">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-xs-5 title-container">
+              <div className="col-xs-12 col-md-5 title-container">
                 <ReactCSSTransitionGroup
                   transitionName="example"
                   transitionAppear={true}
@@ -60,7 +60,7 @@ class App extends Component {
                   <Titles />
                 </ReactCSSTransitionGroup>
               </div>
-              <div className="col-xs-7 form-container">
+              <div className="col-xs-12 col-md-7 form-container">
                 <ReactCSSTransitionGroup
                   transitionName="example"
                   transitionAppear={true}
