@@ -80,13 +80,7 @@ class App extends Component {
                   transitionLeave={false}
                 >
                   <Weather
-                    temperature={this.state.temperature}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    pressure={this.state.pressure}
-                    description={this.state.description}
-                    error={this.state.error}
+                    data={this.state}
                   />
                 </ReactCSSTransitionGroup>
               </div>
