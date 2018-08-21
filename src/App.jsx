@@ -4,6 +4,7 @@ import './App.css';
 import Titles from './components/titles';
 import Form from './components/form';
 import Weather from './components/weather';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const API_KEY = "c1b9236ae770a2e2e69121ccaac0eea3";
 
@@ -49,18 +50,39 @@ class App extends Component {
           <div className="container">
             <div className="row">
               <div className="col-xs-5 title-container">
-                <Titles/>
+                <ReactCSSTransitionGroup
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={5500}
+                transitionEnter={false}
+                transitionLeave={false}>
+                  <Titles/>
+                </ReactCSSTransitionGroup>
               </div>
               <div className="col-xs-7 form-container">
-                <Form getWeather={this.getWeather}/>
-                <Weather
-                temperature={this.state.temperature}
-                city={this.state.city}
-                country={this.state.country}
-                humedity={this.state.humedity}
-                description={this.state.description}
-                error={this.state.error}
+                <ReactCSSTransitionGroup
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={5500}
+                transitionEnter={false}
+                transitionLeave={false}>
+                  <Form getWeather={this.getWeather}/>
+                </ReactCSSTransitionGroup>
+                <ReactCSSTransitionGroup
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={10500}
+                transitionEnter={false}
+                transitionLeave={false}>
+                  <Weather
+                  temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humedity={this.state.humedity}
+                  description={this.state.description}
+                  error={this.state.error}
                 />
+                </ReactCSSTransitionGroup>
               </div>
             </div>
           </div>
