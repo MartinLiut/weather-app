@@ -47,41 +47,44 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="main">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xs-5 title-container">
                 <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionAppear={true}
-                transitionAppearTimeout={5500}
-                transitionEnter={false}
-                transitionLeave={false}>
-                  <Titles/>
+                  transitionName="example"
+                  transitionAppear={true}
+                  transitionAppearTimeout={5500}
+                  transitionEnter={false}
+                  transitionLeave={false}
+                >
+                  <Titles />
                 </ReactCSSTransitionGroup>
               </div>
               <div className="col-xs-7 form-container">
                 <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionAppear={true}
-                transitionAppearTimeout={5500}
-                transitionEnter={false}
-                transitionLeave={false}>
+                  transitionName="example"
+                  transitionAppear={true}
+                  transitionAppearTimeout={5500}
+                  transitionEnter={false}
+                  transitionLeave={false}
+                >
                   <Form getWeather={this.getWeather}/>
                 </ReactCSSTransitionGroup>
                 <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionAppear={true}
-                transitionAppearTimeout={10500}
-                transitionEnter={false}
-                transitionLeave={false}>
+                  transitionName="example"
+                  transitionAppear={true}
+                  transitionAppearTimeout={10500}
+                  transitionEnter={false}
+                  transitionLeave={false}
+                >
                   <Weather
-                  temperature={this.state.temperature}
-                  city={this.state.city}
-                  country={this.state.country}
-                  humedity={this.state.humedity}
-                  description={this.state.description}
-                  error={this.state.error}
-                />
+                    temperature={this.state.temperature}
+                    city={this.state.city}
+                    country={this.state.country}
+                    humedity={this.state.humedity}
+                    description={this.state.description}
+                    error={this.state.error}
+                  />
                 </ReactCSSTransitionGroup>
               </div>
             </div>
